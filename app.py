@@ -5,12 +5,12 @@ import stripe
 
 app = Flask(__name__)
    # configuring postgresql database
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:4321@localhost/ecommerce'
-app.config['SECRET_KEY'] = '8695efcd39f43c5a1b233d23f767fd5e406c3a3e228462695d8e51b247808982'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://owner:password@localhost/your_database_name'
+app.config['SECRET_KEY'] = 'your secret key'
 db = SQLAlchemy(app)
 bcrypt = Bcrypt(app)
 
-stripe.api_key = 'sk_test_51QgO0SHBO0HqQHB77p6YsbTw683hxdsQYIQKSqTOkWlHu9JJhsG3bUw5FZLRtY2mF3k7hqFYccD1IkW6xdaV9kGM005uNriFEg'
+stripe.api_key = ' your api key'
 
   # Creating three tables for storing data of user , product and orders using postgresql
 
