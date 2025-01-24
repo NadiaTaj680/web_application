@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>base</title>
+    <style>
+        h1 {
+            text-align: center; /* Centers the text horizontally */
+            background-color: #071f6e; /* Background color for the heading */
+            color: #cfdee7; /* Text color */
+            padding: 20px; /* Adds space inside the heading box */
+            border: 2px solid #161010; /* Optional border for better visibility */
+            border-radius: 10px; /* Rounds the corners of the border */
+            width: 50%; /* Optional: Defines the width of the heading */
+            margin: 50px auto; /* Centers the heading block horizontally */
+            font-family: Arial, sans-serif; /* Font style */
+        }
+    </style>
+    <title>Product Card</title>
+    <style>
+        /* Styling for the product card */
+        .product-card {
+            border: 1px solid #ccc; /* Soft border */
+            border-radius: 8px; /* Rounded corners */
+            padding: 16px; /* Spacing inside the card */
+            margin: 16px auto; /* Center the card on the page */
+            width: 300px; /* Fixed width for the card */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+            font-family: Arial, sans-serif; /* Clean font */
+            background-color: #fff; /* White background */
+            text-align: center; /* Center the content */
+            transition: transform 0.2s, box-shadow 0.2s; /* Hover effect animation */
+        }
+
+        .product-card:hover {
+            transform: scale(1.05); /* Slight zoom on hover */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* More shadow on hover */
+        }
+
+        .product-box {
+            height: 150px; /* Placeholder height for image */
+            background-color: #f9f9f9; /* Light gray background */
+            border-radius: 8px; /* Rounded corners for image area */
+            margin-bottom: 16px; /* Space below the image */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #999; /* Placeholder text color */
+        }
+
+        .product-card h2 {
+            font-size: 1.5rem; /* Larger font for the product title */
+            color: #333; /* Dark text color */
+            margin-bottom: 8px; /* Space below the title */
+        }
+
+        .product-card p {
+            font-size: 1rem; /* Regular font size */
+            color: #666; /* Muted text color */
+            margin: 4px 0; /* Space between paragraphs */
+        }
+
+        .product-card strong {
+            color: #000; /* Bold black text for emphasis */
+        }
+
+        .product-card button {
+            background-color: #007bff; /* Blue button */
+            color: #fff; /* White text */
+            border: none; /* No border */
+            border-radius: 4px; /* Rounded corners */
+            padding: 8px 12px; /* Button padding */
+            font-size: 1rem; /* Button font size */
+            cursor: pointer; /* Pointer cursor on hover */
+            margin: 8px; /* Space between buttons */
+            transition: background-color 0.2s; /* Smooth hover effect */
+        }
+
+        .product-card button:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+    </style>
+</head>
+<body>
+    <h1> PRODUCT CATALOG</h1>
+    
+    <div style="border: 1px solid #140e0e; padding: 16px; margin: 16px 0; width: 300px;">
+    <div class="product-card">
+        <div class="product-box"></div>
+        <h2>Mouse</h2>
+        <p>Description of Product Mouse</p>
+        <p><strong>Price:</strong> $300</p>
+        <form action="/add_to_cart/1" method="POST">
+            <button type="submit">Add to Cart</button>
+        </form>
+        <div>
+            <form action="/add_to_cart/1" method="POST">
+                <button type="submit">Remove From Cart</button>
+        </div>
+    </div>
+    <div style="border: 1px solid #141111; padding: 16px; margin: 16px 0; width: 300px;">
+    <div class="product-card">
+        <div class="product-box"></div>
+        <h2>Computer</h2>
+        <p>Description of Product Computer</p>
+        <p><strong>Price:</strong> $1000</p>
+        <form action="/add_to_cart/6" method="POST">
+            <button type="submit">Add to Cart</button>
+        </form>
+        <div> <div>
+            <form action="/remove_from_cart/6" method="POST">
+                <button type="submit">Remove From Cart</button>
+            </form>
+        </div> </div>
+        
+    </div>
+    <div style="border: 1px solid #181010; padding: 16px; margin: 16px 0; width: 300px;">
+    <div class="product-card">
+        <div class="product-box"></div>
+        <h2>Laptop</h2>
+        <p>Description of Product Laptop</p>
+        <p><strong>Price:</strong> $2000</p>
+        <form action="/add_to_cart/7" method="POST">
+            <button type="submit">Add to Cart</button>
+        </form>
+        <div>
+            <form action="/remove_from_cart/7" method="POST">
+                <button type="submit">Remove From Cart</button>
+            </form>
+        </div>
+        
+    </div>
+    <div style="border: 1px solid #1f0808; padding: 16px; margin: 16px 0; width: 300px;">
+    <div class="product-card">
+        <div class="product-box"></div>
+        <h2>Handsfree</h2>
+        <p>Description of Product Handsfree</p>
+        <p><strong>Price:</strong> $200</p>
+        <form action="/add_to_cart/8" method="POST">
+            <button type="submit">Add to Cart</button>
+        </form>
+        <div>
+            <form action="/remove_from_cart/8" method="POST">
+                <div>
+                    <button type="submit">Remove From cart</button>
+                </div>
+                
+            </form>
+        </div>
+        
+    </div>
+    <div style="border: 1px solid #1f0808; padding: 16px; margin: 16px 0; width: 300px;">
+    <div class="product-card">
+        <div class="product-box"></div>
+        <h2>Charger</h2>
+        <p>Description of Product Charger</p>
+        <p><strong>Price:</strong> $159</p>
+        <form action="/add_to_cart/5" method="POST">
+            <button type="submit">Add to Cart</button>
+        </form>
+        <div>
+            <form action="/remove_from_cart/5" method="POST">
+                <div>
+                    <button type="submit">Remove From cart</button>
+                </div>
+                
+            </form>
+        </div>
+        
+    </div>
+    
+    
+</body>
+</html>

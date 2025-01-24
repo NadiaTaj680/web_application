@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Checkout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f9f9f9;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        p {
+            font-size: 1.2rem;
+            text-align: center;
+            color: #555;
+        }
+
+        h1.success {
+            color: #28a745; /* Green for success */
+        }
+
+        h1.error {
+            color: #dc3545; /* Red for error */
+        }
+
+        p.error {
+            color: #dc3545; /* Red for error details */
+        }
+    </style>
+</head>
+<body>
+    {% if success %}
+        <h1>Payment Successful!</h1>
+        <p> <b>Your order has been placed.</p></b>
+    {% elif error %}
+        <h1>Payment Failed</h1>
+        <p>Error: {{ error }}</p>
+    {% endif %}
+
+    <h3>Total: ${{total}}</h3>
+</body>
+</html>
